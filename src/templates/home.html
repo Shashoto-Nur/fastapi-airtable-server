@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class='col-md-6 mx-auto text-center py-5'>
+    <div class='py-5 my-5'>
+        <h1>Fastapi - Airtable</h1>
+
+        {% if email and sent_req %}
+            <p>Thank you for joining with {{ email }}</p>
+        {% endif %}
+        <br />
+
+        <form method='POST'>
+            <input class='form-control' type='email' name='email' placeholder='Your email...' required='required' />
+            <input class='btn btn-primary mt-3' type='submit' value='Submit' />
+        </form>
+    </div>
+</div>
+{% endblock %}
